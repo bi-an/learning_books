@@ -1,0 +1,10 @@
+# Project information
+site_name: Learing Books of bi-an
+site_url: https://bi-an.github.io/learning_books
+site_author: bi-an
+# site_description:
+
+# Page tree
+nav:
+  - 首页: README.md
+  - 
