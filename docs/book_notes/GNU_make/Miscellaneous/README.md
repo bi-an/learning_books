@@ -22,9 +22,11 @@ Makefile:8: find1= $
 ```
 
 - SHELL
+ 
 默认的shell是bash，可以通过预定义变量SHELL来自定义成其他shell程序。
 
 - export
+
 bash中`export <varname>`表示将已有变量`<varname>`设置为环境变量，如果`<varname>`之前没有定义，则该句不生效。
 
 bash中`export <varname>=`等价于`<varname>=`和`export <varname>`两句的结果，也就是先定义变量`<varname>`，然后再将其设置为环境变量
