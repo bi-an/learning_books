@@ -21,3 +21,33 @@ Makefile:5: find=a   $
 Makefile:8: find1= $
 ```
 
+- 模式匹配
+
+模式匹配时会先忽略目录，文件名匹配完成之后再加上目录。见[10.5.4 How Patterns Match](https://www.gnu.org/software/make/manual/html_node/Pattern-Match.html)
+
+例如：
+
+```makefile
+%.o : e%t.c
+	@echo matched:$*
+```
+
+文件如下：
+
+```text
+|-- Makefile
+`-- src
+    |-- eat.c
+```
+
+执行make命令：
+
+```bash
+make src/a.o
+```
+
+结果：
+
+```text
+matched:src/a
+```
