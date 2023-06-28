@@ -1,10 +1,6 @@
-# Project information
-site_name: Learing Books of bi-an
-site_url: https://bi-an.github.io/learning_books
-site_author: bi-an
-# site_description:
-
-# Page tree
+site_name: MkLorum
+site_url: https://example.com/
 nav:
-  - 首页: README.md
-  - 
+    - Home: index.md
+    - About: about.md
+theme: readthedocs
