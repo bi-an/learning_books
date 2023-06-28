@@ -1,5 +1,5 @@
 site_name: MkLorum
-site_url: https://example.com/
+site_url: https://bi-an.github.com/learning_books
 nav:
     - Home: index.md
     - About: about.md
