@@ -4,7 +4,10 @@ theme: readthedocs
 nav:
     - Home: index.md
     - About: about.md
-    - CUDA编程: book_notes/CUDA_programming/README.md
+    - CUDA编程: 
+      - CUDA简介: book_notes/CUDA_programming/README.md
     - GNU make手册:
-      - 第2章 Makefile简介: book_notes/GNU_make/introduction/index.md
+      - 第2章 Makefile简介:
+        - book_notes/GNU_make/introduction/index.md
+        - 测试: book_notes/GNU_make/introduction/test.md
 
