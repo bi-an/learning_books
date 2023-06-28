@@ -3,4 +3,9 @@ site_url: https://bi-an.github.com/learning_books
 nav:
     - Home: index.md
     - About: about.md
+    - CUDA编程: 
+      - book_notes/CUDA_programming/README.md
+    - GNU make手册: book_notes/GNU_make/README.md
+      - 第2章 Makefile简介: book_notes/GNU_make/introduction/index.md
+      - 杂项: 
 theme: readthedocs
