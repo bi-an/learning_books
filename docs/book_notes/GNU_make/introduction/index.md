@@ -1,4 +1,4 @@
-# 1. Makefiles简介
+# Makefiles简介
 
 > 原文链接：[第2章 Makefiles简介](https://www.gnu.org/software/make/manual/html_node/Introduction.html)
 
@@ -11,7 +11,7 @@ make重新编译程序（program）时，每一个改动的C源文件都必须�
 编译以C源文件为单位，每个C源文件都会相应地产生一个目标文件（object file）。
 如果任何一个C源文件被重新编译了，所有的目标文件，不论是新编译的还是上一次编译后保存好的，都会必须被重新链接，以产生新的可执行程序(executable）。
 
-## 1.1. Makefile规则
+## Makefile规则
 
 一个简单的makefile包含以下形式的“规则（rules）”：
 
