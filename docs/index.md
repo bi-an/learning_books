@@ -1,17 +1,16 @@
-# bi-an的读书笔记
+# 彼岸的笔记
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+[在线阅读](https://bi-an.github.io/learning_books/) | 
+[PDF下载](https://bi-an.github.io/learning_books/learning_books.pdf) |
+[文档源码](https://github.com/bi-an/learning_books)
 
-## Commands
+## 读书笔记
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* CUDA编程
+* GNU make手册
 
-## Project layout
+## 日常笔记
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* 英语
+* C++
+* Shell

@@ -1,13 +1,14 @@
 site_name: 彼岸的读书笔记
 site_url: https://bi-an.github.com/learning_books
 theme: readthedocs
+
 nav:
-    - Home: index.md
-    - About: about.md
     - CUDA编程: 
       - CUDA简介: book_notes/CUDA_programming/README.md
     - GNU make手册:
       - 第2章 Makefile简介:
         - book_notes/GNU_make/introduction/index.md
-        - 测试: book_notes/GNU_make/introduction/test.md
+      - 杂项:
+        - 'book_notes/GNU_make/miscellaneous/index.md'
+        - recipes: 'book_notes/GNU_make/miscellaneous/recipes.md'
 
