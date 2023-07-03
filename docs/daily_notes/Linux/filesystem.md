@@ -49,10 +49,23 @@ Linux上的分区指：存储设备中划分出来的一个片段，该片段与
 
 ![分区和文件系统的层次结构示例图](img/Example-of-partition-and-filesystem1-768x340.png.webp "分区和文件系统的层次结构示例图")
 
+你可以使用以下命令在任意存储设备上查看分区：
 
+```bash
+lsblk
+```
 
 ## 挂载
 ## 驱动
 
 
+## 相关命令一览表
+
+| command  	| description 	|
+|----------	|-------------	|
+| lsblk    	|             	|
+| df       	|             	|
+| du       	|             	|
+| quota    	|             	|
+| repquota 	|             	|
 
