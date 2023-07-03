@@ -3,12 +3,25 @@ site_url: https://bi-an.github.com/learning_books
 theme: readthedocs
 
 nav:
+  - 首页: index.md
+  - 书籍笔记:
     - CUDA编程: 
       - CUDA简介: book_notes/CUDA_programming/README.md
     - GNU make手册:
+      - book_notes/GNU_make/index.md
       - 第2章 Makefile简介:
         - book_notes/GNU_make/introduction/index.md
+      - 第3章 写Makefile:
+        - book_notes/GNU_make/writing_makefiles/index.md
       - 杂项:
         - 'book_notes/GNU_make/miscellaneous/index.md'
         - recipes: 'book_notes/GNU_make/miscellaneous/recipes.md'
+  - 日常笔记:
+    - daily_notes/index.md
+    - C++: 'daily_notes/cplusplus/index.md'
+    - 英语:
+      - 'daily_notes/English/index.md'
+      - 常见缩写词: 'daily_notes/English/abbr.md'
+    - Shell:
+      - daily_notes/shell/index.md
 
