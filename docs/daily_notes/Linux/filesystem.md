@@ -38,7 +38,10 @@ Linux上的分区指：存储设备中划分出来的一个片段，该片段与
 文件分配表（FAT，File Allocation Table）是Microsoft开发的第一个文件系统。
 从1997发布之后，有多个版本，称为FAT12、FAT16、FAT32，连续地增加了最大支持文件大小（file size）和驱动器大小（drive size）。
 
-注：驱动器（[drive](https://www.computerhope.com/jargon/d/drive.htm)），是一个能存储和读取非易失信息的位置，比如磁盘（disk）或光盘（disc）。
+FAT32允许的最大文件大小为4Gb。直至WindowsXP，FAT32是默认的文件系统，之后被NTFS取代。
+虽然FAT非常基础，但是它支持几乎所有的设备和操作系统。
+
+**注：** 驱动器（[drive](https://www.computerhope.com/jargon/d/drive.htm)），是一个能存储和读取非易失信息的位置，比如磁盘（disk）或光盘（disc）。
 
 如下图，驱动器A:是一个软盘（[floppy drive](https://www.computerhope.com/jargon/f/fdd.htm)），
 驱动器C:是主硬盘（primary hard drivce），
@@ -49,6 +52,9 @@ CD-ROM常常是最后一个盘符（drive letter）。
 ![驱动器示例](img/my-compu-drive.webp "驱动器示例图")
 
 * NTFS
+
+新技术文件系统（New Technology File System，NTFS）是FAT的现代替代者。
+除了支持高达16EB（大于170亿GB）的驱动器大小和256TB的单文件大小外，还支持日志系统（[journaling system](https://en.wikipedia.org/wiki/Journaling_file_system)）。
 
 * ext/ext2/ext3/ext4
 
