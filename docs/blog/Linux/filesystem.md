@@ -1,6 +1,8 @@
 # 文件系统
 
 * `/proc`: 查看手册 `man proc`。
+* `/proc/self/exe`: 是指向当前进程的程序文件的软链接。
+* `/proc/<pid>/exe`: 是指向进程`<pid>`的程序文件的软链接。
 
 
 ## 分区(Partition)和文件系统(Filesystem)
@@ -104,11 +106,11 @@ lsblk
 
 ## 相关命令一览表
 
-| command  | usage example               | description                                                                                      |
-|----------|-----------------------------|--------------------------------------------------------------------------------------------------|
-| lsblk    | lsblk [options] [device...] | list all avaivable or specified block devices. Reads the sysfs filesystem to gather information. |
-| df       | df [OPTION]... [FILE]...    | report file system disk space usage on which each FILE resides                                   |
-| du       | du [OPTION]... [FILE]...    | estimate file space usage                                                                        |
-| quota    | quota -u user...            | display users' disk usage and limits                                                             |
-| repquota |                             | prints a summary of disc usage and quotas for the specified file system.                         |
-
+| command  | usage example               | description                                                                                                                                                                                                                                   |
+|----------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| lsblk    | lsblk [options] [device...] | list all avaivable or specified block devices.<br>Reads the sysfs filesystem to gather information.                                                                                                                                           |
+| df       | df [OPTION]... [FILE]...    | report file system disk space usage on which each FILE resides.                                                                                                                                                                               |
+| du       | du [OPTION]... [FILE]...    | estimate file space usage.                                                                                                                                                                                                                    |
+| quota    | quota -u user...            | display users' disk usage and limits. <br>quota reports  the quotas of all the filesystems listed in /etc/mtab. <br>For filesystems that are NFS-mounted a call to the rpc.rquotad on the server machine is performed to get the information. |
+| repquota |                             | prints a summary of disc usage and quotas for the specified file system.                                                                                                                                                                      |
+| mount    |                             |                                                                                                                                                                                                                                               |

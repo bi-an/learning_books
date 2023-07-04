@@ -16,12 +16,12 @@ nav:
       - 杂项:
         - 'book_notes/GNU_make/miscellaneous/index.md'
         - recipes: 'book_notes/GNU_make/miscellaneous/recipes.md'
-  - 日常笔记:
-    - daily_notes/index.md
-    - C++: 'daily_notes/cplusplus/index.md'
+  - 个人博客:
+    - blog/index.md
+    - C++: 'blog/cplusplus/index.md'
     - 英语:
-      - 'daily_notes/English/index.md'
-      - 常见缩写词: 'daily_notes/English/abbr.md'
+      - 'blog/English/index.md'
+      - 常见缩写词: 'blog/English/abbr.md'
     - Shell:
-      - daily_notes/shell/index.md
+      - blog/shell/index.md
 
