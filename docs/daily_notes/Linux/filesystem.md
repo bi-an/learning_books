@@ -35,9 +35,33 @@ Linux上的分区指：存储设备中划分出来的一个片段，该片段与
 
 * FAT
 
+文件分配表（FAT，File Allocation Table）是Microsoft开发的第一个文件系统。
+从1997发布之后，有多个版本，称为FAT12、FAT16、FAT32，连续地增加了最大支持文件大小（file size）和驱动器大小（drive size）。
+
+注：驱动器（[drive](https://www.computerhope.com/jargon/d/drive.htm)），是一个能存储和读取非易失信息的位置，比如磁盘（disk）或光盘（disc）。
+
+如下图，驱动器A:是一个软盘（[floppy drive](https://www.computerhope.com/jargon/f/fdd.htm)），
+驱动器C:是主硬盘（primary hard drivce），
+驱动器D:和E:是分区，F:是[CD-ROM](https://www.computerhope.com/jargon/c/cdrom.htm)。
+CD-ROM常常是最后一个盘符（drive letter）。
+在多数情况下，硬盘是C:驱动器，CD-ROM或其他光盘是D:驱动器。
+
+![驱动器示例](img/my-compu-drive.webp "驱动器示例图")
+
 * NTFS
 
 * ext/ext2/ext3/ext4
+
+Linux的扩展文件系统（extended file system）或ext于1992年发布。之后有了3次更新：
+
+ext2引入了文件属性（文件权限），ext3引入了日志功能（[journaling](https://en.wikipedia.org/wiki/Journaling_file_system)）。
+
+ext4对ext2和ext3向后兼容，增加了存储限制和一些性能调整。
+可以支持高达1EB的卷（volumn），单个文件可以达16TB。
+
+ext4也引入了延迟内存分配的概念，即在文件被强制刷新到存储设备时才为其分配扇区。
+这提高了CPU的性能并减少了坏的扇区。
+今天几乎所有的现代Linux发行版都使用ext4作为默认的文件系统。
 
 * ZFS
 
@@ -49,11 +73,24 @@ Linux上的分区指：存储设备中划分出来的一个片段，该片段与
 
 ![分区和文件系统的层次结构示例图](img/Example-of-partition-and-filesystem1-768x340.png.webp "分区和文件系统的层次结构示例图")
 
+我有一个500GB的SSD，分成3个分区（boot、home、root），使用GPT作为分区表。
+
+我没有分出swap分区。所有的分区都跑在ext4文件系统上。
+
+在一个双启动（dual-booted）存储设备（Windows和Linux）上，还有几个适用于Windwows的NTFS分区。
+
 你可以使用以下命令在任意存储设备上查看分区：
 
 ```bash
 lsblk
 ```
+
+更多资源请访问：
+
+* [How to install ZFS on Ubuntu – A Setup and Usage Guide](https://www.linuxfordevices.com/tutorials/ubuntu/install-zfs-on-ubuntu)
+* [Ext4 vs Btrfs Filesystems – Which one should you choose?](https://www.linuxfordevices.com/tutorials/linux/ext4-vs-btrfs-filesystem)
+* [How to install and format a partition with the Btrfs on Ubuntu?](https://www.linuxfordevices.com/tutorials/linux/btrfs-on-ubuntu)
+* [Frequently Asked Questions regarding ext4](https://ext4.wiki.kernel.org/index.php/Frequently_Asked_Questions)
 
 ## 挂载
 ## 驱动
@@ -61,11 +98,11 @@ lsblk
 
 ## 相关命令一览表
 
-| command  	| description 	|
-|----------	|-------------	|
-| lsblk    	|             	|
-| df       	|             	|
-| du       	|             	|
-| quota    	|             	|
-| repquota 	|             	|
+| command  | usage example               | description                                                                                      |
+|----------|-----------------------------|--------------------------------------------------------------------------------------------------|
+| lsblk    | lsblk [options] [device...] | list all avaivable or specified block devices. Reads the sysfs filesystem to gather information. |
+| df       | df [OPTION]... [FILE]...    | report file system disk space usage on which each FILE resides                                   |
+| du       | du [OPTION]... [FILE]...    | estimate file space usage                                                                        |
+| quota    | quota -u user...            | display users' disk usage and limits                                                             |
+| repquota |                             | prints a summary of disc usage and quotas for the specified file system.                         |
 
