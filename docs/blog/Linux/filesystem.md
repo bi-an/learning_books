@@ -4,6 +4,10 @@
 * `/proc/self/exe`: 是指向当前进程的程序文件的软链接。
 * `/proc/<pid>/exe`: 是指向进程`<pid>`的程序文件的软链接。
 
+    [How to Find File System Names](https://docs.oracle.com/cd/E19455-01/805-7228/bkuptasks2-78540/index.html)
+
+
+
 
 ## 分区(Partition)和文件系统(Filesystem)
 
@@ -29,7 +33,7 @@ Linux上的分区指：存储设备中划分出来的一个片段，该片段与
 
 文件系统是我们在每个分区中管理数据的方式。它负责索引、存储、检索、命名文件和维护文件的元数据（文件所有者、大小、权限等）。存储在分区中。
 
-一个文件保存在多个连续的**扇区（sector）**中，现代每个扇区大约为4096字节。
+一个文件保存在多个连续的 **扇区（sector）** 中，现代每个扇区大约为4096字节。
 文件系统负责组织哪些扇区准备好使用了、一个文件必须存储在哪个扇区、哪个扇区存储了什么文件。
 如果没有这种组织，就无法无法检索任何文件，因为系统无法得知文件的位置（block，块）。
 
@@ -101,16 +105,49 @@ lsblk
 * [Frequently Asked Questions regarding ext4](https://ext4.wiki.kernel.org/index.php/Frequently_Asked_Questions)
 
 ## 挂载
+
+挂载：使设备上的文件和目录可以通过文件系统访问的一个过程。见[维基百科](https://zh.wikipedia.org/zh-cn/%E6%8C%82%E8%BD%BD)。
+
+挂载点：A mount point is a location in the partition used as a root filesystem.
+
 ## 驱动
 
 
 ## 相关命令一览表
 
-| command  | usage example               | description                                                                                                                                                                                                                                   |
-|----------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| lsblk    | lsblk [options] [device...] | list all avaivable or specified block devices.<br>Reads the sysfs filesystem to gather information.                                                                                                                                           |
-| df       | df [OPTION]... [FILE]...    | report file system disk space usage on which each FILE resides.                                                                                                                                                                               |
-| du       | du [OPTION]... [FILE]...    | estimate file space usage.                                                                                                                                                                                                                    |
-| quota    | quota -u user...            | display users' disk usage and limits. <br>quota reports  the quotas of all the filesystems listed in /etc/mtab. <br>For filesystems that are NFS-mounted a call to the rpc.rquotad on the server machine is performed to get the information. |
-| repquota |                             | prints a summary of disc usage and quotas for the specified file system.                                                                                                                                                                      |
-| mount    |                             |                                                                                                                                                                                                                                               |
+lsblk
+
+    lsblk [options] [device...]
+
+    list all avaivable or specified block devices.
+    Reads the sysfs filesystem to gather information.
+
+df
+
+    df [OPTION]... [FILE]...
+
+    report file system disk space usage on which each FILE resides.
+
+    df -T 打印文件系统的类型。
+
+du
+
+    du [OPTION]... [FILE]...
+
+    estimate file space usage.
+
+quota
+
+    quota -s -u user...
+
+    display users' disk usage and limits.
+    quota reports the quotas of all the filesystems listed in /etc/mtab.
+    For filesystems that are NFS-mounted a call to the rpc.rquotad on the server machine is performed to get the information.
+
+    -s, --human-readable
+
+repquota
+
+    prints a summary of disc usage and quotas for the specified file system.
+
+mount

@@ -1,0 +1,1 @@
+* `lsb_release` - FSG lsb_release v2.0 prints certain LSB (Linux Standard Base) and Distribution information.
