@@ -4,7 +4,7 @@
 
 本站点使用[mkdocs](https://www.mkdocs.org/)、[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)搭建，使用markdown语法。
 
-站点配置示例：[mkdoc-material示例](https://github.com/squidfunk/mkdocs-material)
+站点配置示例：[mkdocs-material示例](https://github.com/squidfunk/mkdocs-material)
 
 [![Deploy](https://github.com/bi-an/learning_books/actions/workflows/ci.yml/badge.svg)](https://github.com/bi-an/learning_books/actions/workflows/ci.yml)
 [![GitHub release](https://img.shields.io/github/release/bi-an/learning_books.svg)](https://github.com/bi-an/learning_books/releases)
