@@ -2,7 +2,8 @@ site_name: 彼岸的笔记
 site_url: https://bi-an.github.com/learning_books
 #theme: material
 theme:
-  name: mkdocs
+  #name: mkdocs
+  name: material
   highlightjs: true
   hljs_languages:
     - yaml
