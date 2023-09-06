@@ -4,7 +4,7 @@
 
 ## 常见shell命令
 
-* `screen` - 虚拟终端管理器。
+`screen` - 虚拟终端管理器。
 
   - 会话保存和恢复：使用`screen`新建一个终端，会清屏；当离开`screen` 终端（detach或exit）时，上一次的终端界面可以被恢复。
 
@@ -23,11 +23,18 @@
 
     **注意：** 这和使用`&`或`ctrl-Z`创建的后台进程不同，如果父terminal退出，则后台进程会收到`HUP`信号而退出。
 
-* `cd`
+`cd`
     - `cd -` - 返回上一个目录。
 
-* `ftp`
+`ftp`
+
+    SYNOPSIS
+        tnftp [-46AadefginpRtVv?] [-N netrc] [-o output] [-P port] [-q quittime] [-r retry] [-s srcaddr] [-T dir,max[,inc]] [-x xfersize] [[user@]host [port]] [[user@]host:[path][/]] [file:///path] [ftp://[user[:password]@]host[:port]/path[/][;type=type]] [http://[user[:password]@]host[:port]/path] [https://[user[:password]@]host[:port]/path] ...
+        
+        tnftp -u url file ...
+
   - 参考：[FTP获取文件](https://juejin.cn/s/ftp%20%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6)
+  - 命令行输入`ftp`，进入ftp客户端。
   - FTP命令：
     - `open host [port]`
     - `get remote-file [local-file]`
@@ -36,37 +43,59 @@
     - `binary` - Set the file transfer type to support binary image transfer.
     - `bye` - Terminate the FTP session with the remote server and exit ftp. An end of file will also terminate the session and exit.
 
+  例如以下URL：
+    
+    ftp://aaa:bbb@ftp.adbc.com/out/a.txt
+
+  在这个URL中，aaa是用户名，bbb是密码，ftp.adbc.com是FTP服务器域名，out/a.txt是文件路径和文件名。这个URL可以用于连接到FTP服务器并下载a.txt文件。
+
 * [LSF命令](https://zhuanlan.zhihu.com/p/283973455)
   - `bjobs`
 
-* `fg` - bash内置命令，后台进程移动到前台。`fg --help`查看帮助。`/path/to/command &`会新建一个后台进程。
-* `bg` - bash内置命令，前台进程移动到后台。可以使用`ctrl-Z`先将进程suspend，然后使用`bg %job_num`将其切换到后台运行。
-* `jobs -l` - bash内置命令，查看所有jobs。
-* `type` - 查看一个命令是否是bash内置。
-* `less` - 比`more`功能更多，不支持语法高亮。语法高亮插件见[链接](https://unix.stackexchange.com/questions/90990/less-command-and-syntax-highlighting)。
-* `apt-cache search` - RedHat上等价命令为`yum --cacheonly list`。
-* `tr` - translate or delete characters.
-* [三个锁定文件命令](https://juejin.cn/s/linux%20%E6%96%87%E4%BB%B6%E9%94%81%20%E5%91%BD%E4%BB%A4)
+`fg` - bash内置命令，后台进程移动到前台。`fg --help`查看帮助。`/path/to/command &`会新建一个后台进程。
+
+`bg` - bash内置命令，前台进程移动到后台。可以使用`ctrl-Z`先将进程suspend，然后使用`bg %job_num`将其切换到后台运行。
+
+`jobs -l` - bash内置命令，查看所有jobs。
+
+`type` - 查看一个命令是否是bash内置。
+
+`less` - 比`more`功能更多，不支持语法高亮。语法高亮插件见[链接](https://unix.stackexchange.com/questions/90990/less-command-and-syntax-highlighting)。
+
+  ESC-u 取消搜索高亮（该快捷键对manual page同样适用）。
+
+`apt-cache search` - RedHat上等价命令为`yum --cacheonly list`。
+
+`tr` - translate or delete characters.
+
+[三个锁定文件命令](https://juejin.cn/s/linux%20%E6%96%87%E4%BB%B6%E9%94%81%20%E5%91%BD%E4%BB%A4)
 * https://xie.infoq.cn/article/85434854ec0e21068a3312927
-* [锁定文件命令chattr](https://www.jianshu.com/p/6c786a8621d7)
-* `lsattr` - 只对`ext`文件系统有效，对`nfs`之类文件系统无效，可以通过`df -T`打印文件系统的类型。
-* `flock` - 读写锁。例如测试时可以通过`flock <filename> cat`持有锁，然后等待`cat`的输入，也就是实现持锁等待。
-* `ps`
-* `pstree`
-* `pidof`
-* `pgrep` - 打印与模式字符串匹配的进程的ID。
+
+[锁定文件命令chattr](https://www.jianshu.com/p/6c786a8621d7)
+
+`lsattr` - 只对`ext`文件系统有效，对`nfs`之类文件系统无效，可以通过`df -T`打印文件系统的类型。
+
+`flock` - 读写锁。例如测试时可以通过`flock <filename> cat`持有锁，然后等待`cat`的输入，也就是实现持锁等待。
+
+`ps`
+
+`pstree`
+
+`pidof`
+
+`pgrep` - 打印与模式字符串匹配的进程的ID。
 
   For example,
 
-      $ pgrep -u root sshd
+    $ pgrep -u root sshd
 
   will only list the processes called sshd AND owned by root.  On the other hand,
 
-      $ pgrep -u root,daemon
+    $ pgrep -u root,daemon
 
   will list the processes owned by root OR daemon.
 
-* `find`
+`find`
 
   * 任务1：将上级目录的所有的内容创建成软链接。
 
@@ -99,15 +128,13 @@ tail
 
 ptack
 
-Example:
-
-```bash
-while true; do
-  sleep 1 &
-  ...your stuff here...
-  wait # for sleep
-done
-```
+  ```bash
+  while true; do
+    sleep 1 &
+    ...your stuff here...
+    wait # for sleep
+  done
+  ```
 
 echo
 

@@ -316,7 +316,7 @@ They certainly had it in for her. 他们当然是为了她。
 
 ['Tis Pity She's a Whore](https://en.wikipedia.org/wiki/%27Tis_Pity_She%27s_a_Whore). 可惜她是一个妓女，John Ford 导演的音乐剧。'Tis 是 it is 的缩写。
 
-Would you go through my lines with me. 你可以帮我一起练习一下台词吗？
+Would you go through my lines with me? 你可以帮我一起练习一下台词吗？
 
 I doubt he'll have time. 我怀疑他是否有时间。
 
