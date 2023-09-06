@@ -6,7 +6,7 @@ theme: material
 # Navigation
 nav:
   - 首页: index.md
-  - 书籍笔记:
+  - 书籍:
     - CUDA编程: 
       - CUDA简介: book_notes/CUDA_programming/README.md
     - GNU make手册:
@@ -18,7 +18,7 @@ nav:
       - 杂项:
         - 'book_notes/GNU_make/miscellaneous/index.md'
         - recipes: 'book_notes/GNU_make/miscellaneous/recipes.md'
-  - 个人博客:
+  - 博客:
     - blog/index.md
     - C++: 'blog/cplusplus/index.md'
     - 英语:
