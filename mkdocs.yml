@@ -85,6 +85,8 @@ plugins:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
+  - gen_nav:
+      enabled: true
 
 # Navigation
 nav:
