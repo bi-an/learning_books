@@ -1,5 +1,10 @@
 site_name: 彼岸的笔记
-site_url: https://bi-an.github.com/learning_books
+site_url: https://bi-an.github.io/learning_books
+
+# Repository
+repo_name: bi-an/learning_books
+repo_url: https://github.com/bi-an/learning_books
+
 theme:
   name: material
   features:
