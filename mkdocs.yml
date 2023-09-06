@@ -1,7 +1,23 @@
 site_name: 彼岸的笔记
 site_url: https://bi-an.github.com/learning_books
-#theme: readthedocs
-theme: material
+#theme: material
+theme:
+  name: mkdocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+    - cpp
+    - java
+  analytics:
+    gtag: G-ABC123
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+  #nav style can be dark or light
+  nav_style: dark
 
 # Navigation
 nav:
