@@ -14,3 +14,11 @@
 * 英语
 * C++
 * Shell
+
+```cpp
+#include <stdio.h>
+
+int main() {
+  printf("hello world!\n");
+}
+```
