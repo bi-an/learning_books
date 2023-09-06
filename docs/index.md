@@ -4,12 +4,12 @@
 [PDF下载](https://bi-an.github.io/learning_books/learning_books.pdf) |
 [文档源码](https://github.com/bi-an/learning_books)
 
-## 读书笔记
+## 书籍
 
 * CUDA编程
 * GNU make手册
 
-## 日常笔记
+## 博客
 
 * 英语
 * C++
