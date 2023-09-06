@@ -46,6 +46,14 @@ markdown_extensions:
   - md_in_html
   - tables
 
+# Plugins
+plugins:
+  - blog
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
 # Navigation
 nav:
   - 首页: index.md
