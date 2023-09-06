@@ -77,7 +77,11 @@ markdown_extensions:
 # Plugins
 plugins:
   - blog
+  # Chinese search has an issue, using ja instead https://github.com/mkdocs/mkdocs/issues/2509#issuecomment-882689383
   - search:
+      lang:
+          - en
+          - ja
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
