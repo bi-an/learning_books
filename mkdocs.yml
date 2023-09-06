@@ -10,24 +10,46 @@ theme:
     - html
     - makefile
 
-#theme:
-#  #name: mkdocs
-#  name: material
-#  highlightjs: true
-#  hljs_languages:
-#    - yaml
-#    - rust
-#    - cpp
-#    - java
-#  analytics:
-#    gtag: G-ABC123
-#  shortcuts:
-#    help: 191    # ?
-#    next: 78     # n
-#    previous: 80 # p
-#    search: 83   # s
-#  #nav style can be dark or light
-#  nav_style: dark
+# Extensions
+markdown_extensions:
+  # Show contents of a markdown file
+  - toc:
+      permalink: true
+  # Enable "note, tip..." block
+  - admonition
+  # Enable collapsible function of admonition feature
+  - pymdownx.details
+  # Block configure
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  # Enable content tabs
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Enable footnote feature
+  - footnotes
+  # Enable tilde character(~) for delete and subscript
+  - pymdownx.tilde
+  # Enable caret character(^) for insert and superscript
+  - pymdownx.caret
+  # Enable LaTeX math equations, which requires extra js below
+  - pymdownx.arithmatex:
+      generic: true
+  # Enable emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # Enable attributes for button links
+  - attr_list
+  # Enable metadata for tags
+  - meta
+  # Enable markdown in html for home page
+  - md_in_html
+  - tables
 
 # Navigation
 nav:
