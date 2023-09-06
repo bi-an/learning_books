@@ -3,37 +3,6 @@ site_url: https://bi-an.github.com/learning_books
 #theme: readthedocs
 theme: material
 
-# Configuration
-# If there is no the following configuration, the default configuration will be used.
-theme:
-  name: material
-  custom_dir: overrides
-  features:
-    - navigation.tabs
-    - navigation.top
-    - navigation.tracking
-    - search.highlight
-    - search.share
-    - search.suggest
-  palette:
-    # default scheme is light mode, can change to "slate" for dark mode
-    - scheme: default
-      #primary: orange
-      #accent: orange
-      #toggle:
-        #icon: material/toggle-switch-off-outline
-        #name: Switch to dark mode
-    - scheme: slate
-      #primary: orange
-      #accent: orange
-      #toggle:
-        #icon: material/toggle-switch
-        #name: Switch to light mode
-  font:
-    # Pick up a font from https://fonts.google.com/
-    text: Noto Sans Simplified Chinese
-    code: Consolas
-
 # Navigation
 nav:
   - 首页: index.md
