@@ -1,6 +1,7 @@
 site_name: 彼岸的读书笔记
 site_url: https://bi-an.github.com/learning_books
-theme: readthedocs
+#theme: readthedocs
+theme: material
 
 nav:
   - 首页: index.md
