@@ -2,13 +2,8 @@ site_name: 彼岸的笔记
 site_url: https://bi-an.github.com/learning_books
 theme:
   name: material
-  highlightjs: true
-  hljs_languages:
-    - java
-    - cpp
-    - yaml
-    - html
-    - makefile
+  features:
+    - navigation.tabs
 
 # Extensions
 markdown_extensions:
