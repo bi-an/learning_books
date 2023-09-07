@@ -1,3 +1,4 @@
 site/
 test/
 docs/blog/InfiniBand/src/ib_init.cc
+myenv/
