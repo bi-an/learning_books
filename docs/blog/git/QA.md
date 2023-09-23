@@ -1,7 +1,8 @@
-# gitignore不生效
+## gitignore不生效
 
 参考：[链接](https://www.python100.com/html/32VIQ026UL7U.html)。
 
-# 查看commit影响的文件。
+## file mode 10064的含义
 
-    git log --raw
+参考[博客](https://blog.csdn.net/flyd1005/article/details/43824473)
+
