@@ -1,4 +1,4 @@
-# 1. Github Pages
+## Github Pages
 
 使用[github pages](https://docs.github.com/en/pages)可以搭建个人主页。
 
@@ -8,7 +8,7 @@ github pages使用了[CNAME record](https://en.wikipedia.org/wiki/CNAME_record)�
 
 注：[Read the Docs](https://readthedocs.org/)也是一个很好的搭建个人主页的网站。
 
-## Github Pages 站点类型
+### Github Pages 站点类型
 
 有3种类型的 Github Pages 站点（sites）：project, user 和 organization 。
 
@@ -22,7 +22,7 @@ project site 的源文件存储在作为 project 的相同的 repository 中。�
 
 每个 github 账户允许创建 1 个 user 或 organization 站点。无论是被组织还是个人所有，project 站点的个数不限制。
 
-## GitHub Pages 访问方法
+### GitHub Pages 访问方法
 
 参考[官方文档](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#next-steps)。
 
@@ -30,17 +30,17 @@ project site 的源文件存储在作为 project 的相同的 repository 中。�
 
 你也可以使用`Jekyll`等静态站点生成器来给你的github page配置一个主题。
 
-## 站点发布常见问题的解决方法
+### 站点发布常见问题的解决方法
 
 - [Permission denied to github-actions[bot]](https://stackoverflow.com/questions/72851548/permission-denied-to-github-actionsbot)
 
-## Github workflows
+### Github workflows
 
 参考[官方文档](https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions)。
 
-# 2. 配置前准备
+## 配置前准备
 
-## 2.1. Markdown编辑器
+### Markdown编辑器
 
 推荐的[markdown编辑器](https://www.zhihu.com/tardis/zm/art/103348449?source_id=1003)：
 - VSCode：免费。VSCode原生支持Markdown，安装一些插件可以帮助更快地编写markdown文件。
@@ -55,19 +55,19 @@ VSCode markdown插件：
 [在线表格生成器](https://www.tablesgenerator.com/markdown_tables)：可以生成Markdown、Text、HTML、LaTex、MediaWiki格式的表格。
 
 
-## 2.2. 轻量级虚拟机WSL
+### 轻量级虚拟机WSL
 
 WSL，[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install)，是Windows提供的轻量级Linux虚拟机。
 
 安装教程：见[链接](https://zhuanlan.zhihu.com/p/170210673)。
 
-### 2.2.1. WSL默认没有启用systemctl：
+#### WSL默认没有启用systemctl：
 
 启用systemctl的方法：[链接](https://askubuntu.com/questions/1379425/system-has-not-been-booted-with-systemd-as-init-system-pid-1-cant-operate)。
 
 替代方法：不需要启动systemctl，因为会比较占用资源，启动也会变慢。可以使用service命令替代。
 
-### 2.2.2. WSL默认没有安装openssl-server：
+#### WSL默认没有安装openssl-server：
 
 使用ssh连接到服务器时，需要服务器运行着sshd程序，否则连接不上，会出现"[Connection refused](https://www.makeuseof.com/fix-ssh-connection-refused-error-linux/)"错误。
 
@@ -90,7 +90,7 @@ sudo apt-get install openssh-server
 sudo service ssh start
 ```
 
-### 2.2.3. 通过https登录到github
+#### 通过https登录到github
 
 `git push`不再支持输入用户名和密码，当提示输入密码时，需要输入personal access token.
 
@@ -111,17 +111,17 @@ sudo apt-get install gh
 ```
 
 
-# 3. 静态站点生成器
+# 静态站点生成器
 
 以下几种[静态站点生成器][4]都可以用来搭建个人主页。如果使用除JekyII外的工具，则需要配置[Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)以构建和发布你的站点。
 
-## 3.1. mkdocs
+## mkdocs
 
 [mkdocs](https://www.mkdocs.org/)是一个快速的静态网页生成器。
 
 `mkdocs.yml` 文件是 MkDocs 文档生成器的配置文件，其格式说明参见[这里](mkdocs.yml.md)。
 
-## 3.2. JekyII
+## JekyII
 
 Jekyll 是一个静态站点生成器，内置对 GitHub Pages 的支持和简化的构建进程。
 

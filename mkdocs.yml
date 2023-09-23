@@ -73,10 +73,19 @@ markdown_extensions:
   # Enable markdown in html for home page
   - md_in_html
   - tables
+  # Enable code block auto line break, need to install:
+  # pip install pygments
+#   - codehilite:
+#       guess_lang: false
+#       linenums: true
+#       css_class: highlight
+#       auto_links: false
+#       pygments_style: monokai
 
 # Plugins
 plugins:
-  - blog
+  # The blog plugin is not free.
+  #- blog
   # Chinese search has an issue, using ja instead https://github.com/mkdocs/mkdocs/issues/2509#issuecomment-882689383
   - search:
       lang:
@@ -87,6 +96,7 @@ plugins:
       minify_html: true
   - gen_nav:
       enabled: true
+
 
 # Page tree
 # mkdocs-gen-nav-plugin can auto generate the page tree.

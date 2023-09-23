@@ -1,4 +1,4 @@
-# IB简介
+## IB简介
 
 RDMA - Remote Direct Memory Access 远程直接内存存取。
 
@@ -10,7 +10,44 @@ OFA: [Open Fabrics Alliance](https://www.openfabrics.org/).
 
 IBTA: [InfiniBand Trade Association](https://www.infinibandta.org/).
 
-# API
+## 概念
+
+* `CQ` - Complete Queue 完成队列
+* `WQ` - Work Queue 工作队列
+* `WR` - Work Request 工作请求
+* `QP` - Queue Pairs 队列对（Send-Receive）
+* `SQ` - Send Queue 发送队列
+* `RQ` - Receive Queue 接收队列
+* `PD` - Protection Domain 保护域，将QP和MR结合在一起
+* `MR` - Memory Region 内存区域。一块经注册过的且本地网卡可以读写的内存区域。包含R_Key和L_Key。
+* `SGE` - Scatter/Gather Elements 分散/聚集元素。
+* `R_Key` - Remote Key
+* `L_Key` - Local Key
+* `CA` - (Host) Channel Adapter, an inifiniband network interface card.
+* `NIC` - Network Interface Card 网卡。
+* `LID` - Local Identifier.
+* `CM` - Connection Manager.
+
+其他常见缩写：
+
+* `RC` - reliable connected.
+* `SCSI` - Small Computer System Interface 小型计算机系统接口。
+* `SRP` - SCSI RDMA Protocol. / Secure Remote Password.
+
+博客：https://blog.51cto.com/liangchaoxi/4044818
+
+
+## 安装
+
+[InfiniBand 和 RDMA 相关软件包](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/sec-infiniband_and_rdma_related_software_packages)
+
+    sudo apt-get install infiniband-diags
+    sudo apt install ibverbs-utils
+
+## API
+
+- [introduction to programming infiniband](https://insujang.github.io/2020-02-09/introduction-to-programming-infiniband/)
+- [RDMA Aware Programming user manual (PDF)](https://indico.cern.ch/event/218156/attachments/351725/490089/RDMA_Aware_Programming_user_manual.pdf)
 
 以下是一些支持InfiniBand的C++库：
 
@@ -132,48 +169,9 @@ ibv_close_device(context);
 * 博客：https://zhuanlan.zhihu.com/p/337461037
 * 文档：https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/ch-configure_infiniband_and_rdma_networks
 * 知乎专栏：https://www.zhihu.com/column/c_1231181516811390976
+* 知乎专栏：https://www.zhihu.com/column/rdmatechnology
 
 [Linux manual page](https://man7.org/linux/man-pages/man3/ibv_reg_mr.3.html)
-
-## 概念
-
-* `CQ` - Complete Queue 完成队列
-* `WQ` - Work Queue 工作队列
-* `WR` - Work Request 工作请求
-* `QP` - Queue Pairs 队列对（Send-Receive）
-* `SQ` - Send Queue 发送队列
-* `RQ` - Receive Queue 接收队列
-* `PD` - Protection Domain 保护域，将QP和MR结合在一起
-* `MR` - Memory Region 内存区域。一块经注册过的且本地网卡可以读写的内存区域。包含R_Key和L_Key。
-* `SGE` - Scatter/Gather Elements 分散/聚集元素。
-* `R_Key` - Remote Key
-* `L_Key` - Local Key
-* `CA` - (Host) Channel Adapter, an inifiniband network interface card.
-* `NIC` - Network Interface Card 网卡。
-* `LID` - Local Identifier.
-* `CM` - Connection Manager.
-
-其他常见缩写：
-
-* `RC` - reliable connected.
-* `SCSI` - Small Computer System Interface 小型计算机系统接口。
-* `SRP` - SCSI RDMA Protocol. / Secure Remote Password.
-
-博客：https://blog.51cto.com/liangchaoxi/4044818
-
-
-## API
-
-- [introduction to programming infiniband](https://insujang.github.io/2020-02-09/introduction-to-programming-infiniband/)
-- [RDMA Aware Programming user manual (PDF)](https://indico.cern.ch/event/218156/attachments/351725/490089/RDMA_Aware_Programming_user_manual.pdf)
-
-## 安装
-
-[InfiniBand 和 RDMA 相关软件包](https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/networking_guide/sec-infiniband_and_rdma_related_software_packages)
-
-    sudo apt-get install infiniband-diags
-    sudo apt install ibverbs-utils
-
 
 
 ## Command-Line

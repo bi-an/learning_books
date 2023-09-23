@@ -12,7 +12,10 @@
 
 参考：`man ld.so`, `man vdso`, `man elf`, [scanelf](https://linux.die.net/man/1/scanelf)
 
-    ld(1), ldd(1), pldd(1), sprof(1), dlopen(3), getauxval(3), elf(5), capabilities(7), rtld-audit(7), ldconfig(8), sln(8), vdso(7), as(1), elfedit(1), gdb(1), nm(1), objcopy(1), objdump(1), patchelf(1), readelf(1), size(1), strings(1), strip(1), execve(2), dl_iterate_phdr(3), core(5), ld.so(8)
+    ld(1), ldd(1), pldd(1), sprof(1), dlopen(3),getauxval(3), elf(5), capabilities(7),
+    rtld-audit(7), ldconfig(8), sln(8), vdso(7), as(1), elfedit(1), gdb(1), nm(1),
+    objcopy(1), objdump(1), patchelf(1), readelf(1), size(1), strings(1), strip(1),
+    execve(2), dl_iterate_phdr(3), core(5), ld.so(8)
 
 ldconfig
 
@@ -28,7 +31,9 @@ ldconfig
 
     ldconfig 尝试基于该库连接的 C 库来推断 ELF 库（比如 libc5 或 libc6/glibc）的类型。
 
-    一些现有的库没有包含足够的信息来推断其类型。因此， /etc/ld.so.conf 文件格式允许指定期望的类型。这只在这些 ELF 库不能被解决的情况下使用。
+    一些现有的库没有包含足够的信息来推断其类型。
+    因此， /etc/ld.so.conf 文件格式允许指定期望的类型。
+    这只在这些 ELF 库不能被解决的情况下使用。
 
     ldconfig 期望的符号链接有某种特定的形式，比如：
 
@@ -41,10 +46,15 @@ ldconfig
 ldd
 
     描述：
-        ldd调用标准动态连接器（见 ld.so(8)），并且将环境变量 LD_TRACE_LODADED_OBJECTS 为 1 。这会让动态连接器检查程序的动态依赖，并且寻找（根据 ld.so(8) 描述的规则）和加载满足这些依赖的目标。对于每一条依赖，ldd 显示匹配的目标的位置和其载入处的16进制地址。（linux-vdso和ld-linux共享依赖是特殊的；见vdso(7)和ld.so(8)）
+        ldd调用标准动态连接器（见 ld.so(8)），并且将环境变量 LD_TRACE_LODADED_OBJECTS 为 1 。
+        这会让动态连接器检查程序的动态依赖，并且寻找（根据 ld.so(8) 描述的规则）
+        和加载满足这些依赖的目标。对于每一条依赖，
+        ldd 显示匹配的目标的位置和其载入处的16进制地址。
+        （linux-vdso和ld-linux共享依赖是特殊的；见vdso(7)和ld.so(8)）
 
     安全性：
-        注意，在某些情况下，一些版本的ldd可能会尝试通过直接运行程序（可能导致程序中的ELF解释器或程序本身的运行）来获取依赖信息。
+        注意，在某些情况下，一些版本的ldd可能会尝试通过直接运行程序（可能导致程序中的ELF解释器
+        或程序本身的运行）来获取依赖信息。
 
         因此，永远不要在不受信任的可执行文件上使用ldd，因为会导致随意代码的运行。更安全替代方法为：
             $ objdump -p /path/to/program | grep NEEDED
@@ -146,6 +156,18 @@ GCC的提供了不同的方法指定链接的共享库：
 
     指定查找静态库，通过-Wl,-Bdynamic恢复成动态库查找
 
-## 链接参数
+## 链接器选项
 
 参考：`man ld`
+
+    ld - The GNU linker
+
+选项：
+
+    -rpath=dir
+        添加一个目录到运行时库搜寻路径中。
+
+gcc通过 `-Wl` 前缀指定链接器选项，例如：
+
+     gcc -Wl,--start-group foo.o bar.o -Wl,--end-group
+     gcc -Wl,-rpath,'$ORIGIN/../lib'

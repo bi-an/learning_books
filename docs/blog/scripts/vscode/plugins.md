@@ -1,0 +1,9 @@
+- `Remote - SSH`: Windows 连接 Linux。前置条件：Windows 本身需要安装 ssh 命令行工具。
+- `Perforce for VS Code`: perforce 工具。
+- `intent-rainbow`: 用彩色显示缩进。
+- `C/C++`
+- `Makefile Tools`
+- `Verilog Format`
+- `All in one`
+- `c/c++ definition generator`
+- `KoroFileHeader`: 参考[这里](https://zhuanlan.zhihu.com/p/610490070)。

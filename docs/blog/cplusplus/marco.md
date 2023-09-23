@@ -5,6 +5,7 @@
 * `__LINE__`
 * `__func__`
 * `__FILE__`
+* `NDEBUG`：参考[_DEBUG和NDEBUG的区别](https://stackoverflow.com/questions/2290509/debug-vs-ndebug)，其中，`_DEBUG`是Visual Studio定义的，`NDEBUG`是C/C++标准。
 
 ## GNU C预定义宏
 
@@ -26,3 +27,4 @@
       int VAR(myvar); // 展开为 int myvar2;
   }
   ```
+

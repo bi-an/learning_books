@@ -1,2 +1,2 @@
     www.italki.com (skype)
-    HelloTalk
+    HelloTalk APP

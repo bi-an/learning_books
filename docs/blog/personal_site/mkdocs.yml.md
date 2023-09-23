@@ -1,8 +1,8 @@
 `mkdocs.yml` 文件是 MkDocs 文档生成器的配置文件。
 
-一个`mkdocs.yml`的[示例](https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml)。
+示例：[`mkdocs.yml`](https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml)
 
-# theme
+## theme
 
 该文件中的 `theme` 部分用于指定用于生成文档的主题。
 
@@ -46,13 +46,13 @@ favicon 是网站的图标，通常显示在浏览器标签页上。它可以是
 
 icon 是网站的标志，通常显示在网站的标题栏或页眉中。它可以是一个图像文件，例如 .png 或 .jpg 文件。在 mkdocs.yml 文件中，可以使用 icon 字段来指定网站标志的路径。
 
-# plugin
+## plugin
 
 这里列出了三个插件：blog、search和minify。其中，blog插件用于支持博客功能，search插件用于支持搜索功能，而minify插件用于压缩HTML文件。在search插件中，separator参数指定了搜索时的分隔符，这里的分隔符包括空格、连字符、逗号、冒号、等号、感叹号、方括号、括号、引号、反引号和斜杠等。
 
-# extra
+## extra
 
-## analytics
+### analytics
 
 analytics参数用于指定网站分析服务提供商和属性ID，例如衡量网站流量。
 

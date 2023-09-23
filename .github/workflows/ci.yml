@@ -25,5 +25,10 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-minify-plugin mkdocs-gen-nav-plugin
+      - run: |
+          pip install mkdocs-material mkdocs-minify-plugin mkdocs-gen-nav-plugin
+          pip install mkdocs-material-extensions
+          pip install pymdown-extensions
+          pip install mkdocs-macros-plugin
+#          pip install pygments
       - run: mkdocs gh-deploy --force

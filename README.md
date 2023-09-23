@@ -1,18 +1,18 @@
-# 彼岸的读书笔记
-
-本仓库是个人的读书笔记，主要是计算机技术、电子电路方面。
-
-本站点使用[mkdocs](https://www.mkdocs.org/)、[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)搭建，使用markdown语法。
-
-站点配置示例：[mkdocs-material示例](https://github.com/squidfunk/mkdocs-material)
 
 [![Deploy](https://github.com/bi-an/learning_books/actions/workflows/ci.yml/badge.svg)](https://github.com/bi-an/learning_books/actions/workflows/ci.yml)
 [![GitHub release](https://img.shields.io/github/release/bi-an/learning_books.svg)](https://github.com/bi-an/learning_books/releases)
 
-
 [在线阅读](https://bi-an.github.io/learning_books/) | 
 [PDF下载](https://bi-an.github.io/learning_books/learning_books.pdf) |
 [文档源码](https://github.com/bi-an/learning_books)
+
+## 简介
+
+本站点记录个人读书笔记、博客，主要是计算机技术、电子电路方面。
+
+使用[mkdocs](https://www.mkdocs.org/)、[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)搭建，markdown语法。
+
+站点配置示例：[mkdocs-material示例](https://github.com/squidfunk/mkdocs-material)
 
 ## 版权声明
 

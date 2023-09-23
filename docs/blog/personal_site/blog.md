@@ -1,0 +1,5 @@
+* [Hexo博客框架](https://hexo.io/docs/)
+* [Hexo中文文档](https://hexo.io/zh-cn/docs/)
+* [Create and host your blog for free with hexo & Github](https://malekbenz.com/blog/2016/09/10/Create-Host-Blog-for-free-with-Hexo-Github)
+* [npm show "NPM ELF : not found error" in WSL](https://stackoverflow.com/questions/73673804/npm-show-npm-elf-not-found-error-in-wsl)
+* [Github个人访问令牌](https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
