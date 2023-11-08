@@ -77,3 +77,13 @@ try...catch
 gdb命令：`gcore`。
 
 参考：https://man7.org/linux/man-pages/man5/core.5.html
+
+# WSL（windows虚拟机）无法使用gdb
+
+[解决方法](https://github.com/microsoft/WSL/issues/8516)：
+
+安装[PPA的daily build版本](https://launchpad.net/~ubuntu-support-team/+archive/ubuntu/gdb)
+
+  sudo add-apt-repository ppa:ubuntu-support-team/gdb
+  sudo apt update
+  sudo apt install gdb

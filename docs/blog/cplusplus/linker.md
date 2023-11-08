@@ -134,7 +134,7 @@ SONAME
     ELF - Executable and Linking Format.
     ELF描述了normal executable files、relocatable object files、core files和shared objects的格式。
 
-参考：`man elf`
+参考：`man elf`, [博客:elf介绍](http://chuquan.me/2018/05/21/elf-introduce/)。
 
 # 链接名
 

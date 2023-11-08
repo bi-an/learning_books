@@ -5,6 +5,10 @@ site_url: https://bi-an.github.io/learning_books
 repo_name: bi-an/learning_books
 repo_url: https://github.com/bi-an/learning_books
 
+# Preview
+# dev_addr: 0.0.0.0:8000
+dev_addr: 127.0.0.1:8001
+
 theme:
   name: material
   features:

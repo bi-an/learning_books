@@ -2,11 +2,11 @@
 
 ### CPU时间
 
-1. Function's CPU time:
+Function's CPU time:
 
     * Inclusive time: total cpu time, include all functions it calls.
     * Exclusive time: only the time used by the function itself, exclusive all its children.
-  
+
     Refer to [here](https://stackoverflow.com/questions/15760447/what-is-the-meaning-of-incl-cpu-time-excl-cpu-time-incl-real-cpu-time-excl-re/74426370).
 
 1. Wall time: total time the process used, containing IO time.
@@ -22,6 +22,26 @@
 
    这是因为 CPU 时间是所有 CPU 核的运行时间的累加和，墙上时间则是实际的时间。此时 CPU 利用率大于 100%. （这是自己的理解）
 
+### 计时工具
+
+``` bash
+$ /usr/bin/time -p ls
+```
+
+Or,
+
+``` bash
+$ time ls
+```
+
+其中（参考[链接](https://ostechnix.com/how-to-find-the-execution-time-of-a-command-or-process-in-linux/)），
+
+``` bash
+$ type -a time
+time is a shell keyword
+time is /usr/bin/time
+```
+
 #### 释疑
 
 1. Is CPU time in flame graph sum of all the CPU time? Or is it the wall time when CPU works?
@@ -35,7 +55,7 @@ Oracle Developer Studio：
 
 [Thread Analyzer](https://www.oracle.com/application-development/technologies/developerstudio-features.html#thread-analyzer-tab)
 
-[gprof](https://ftp.gnu.org/old-gnu/Manuals/gprof-2.9.1/html_mono/gprof.html)
+[gprof](https://ftp.gnu.org/old-gnu/Manuals/gprof-2.9.1/html_mono/gprof.html): [使用方法](https://blog.csdn.net/luronggui/article/details/118141262)
 
 ## 内存分析
 

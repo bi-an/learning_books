@@ -28,3 +28,5 @@
   }
   ```
 
+* `program_invocation_name`：参考[man page](https://man7.org/linux/man-pages/man3/program_invocation_name.3.html)
+* 
